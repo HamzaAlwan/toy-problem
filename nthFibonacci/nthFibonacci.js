@@ -25,5 +25,13 @@ DO NOT use a recursive solution to this problem. Your solution must run in linea
 
 
 nthFibonacci = function(n) {  
- // your code here
+  let arr = [0, 1];
+  if (n === 0){ return 0 } 
+  else if ( n === 1){ return 1 } 
+  else {
+    for (let i = 0; i < n; i++){
+        arr.push(arr[i] + arr[i + 1])    
+   }
+  }
+  return arr[arr.length - 1]
 };
