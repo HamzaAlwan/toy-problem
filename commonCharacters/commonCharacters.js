@@ -12,5 +12,11 @@
 
 //Works for any number of input strings:
 var commonCharacters = function(string1, string2) {
-  
+    let str = ''
+  for (let i = 0; i < string1.length; i++){
+      if (string2.includes(string1[i]) && !str.includes(string1[i])){
+          str += string1[i]
+      }
+  }
+  return str
 };
