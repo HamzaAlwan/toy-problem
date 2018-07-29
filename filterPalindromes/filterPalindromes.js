@@ -12,4 +12,12 @@
 function filterPalindromes (words) {
   // Write your code here, and
   // return your final answer.
+  let output = []
+  for (let i = 0; i < words.length; i++){
+    let word = words[i].length - 1
+    if (words[i][0].toLowerCase() === words[i][word].toLowerCase()){
+      output.push(words[i])
+    }
+  }
+  return output
 }
