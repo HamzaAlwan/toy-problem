@@ -7,6 +7,19 @@
 //Implement a function that takes an array and sorts it using this technique.
 //NOTE: DO NOT use JavaScript’s built-in sorting function (Array.prototype.sort).
 var bubbleSort = function(array) {
-	
+    let b, s, i, l;
+    for (i = 0; i < array.length; i++){
+        for (l = 0; l < array.length; l++){
+            if (l !== array.length - 1){
+                if (array[l] > array[l + 1]){
+                    b = array[l]
+                    s = array[l + 1]
+                    array[l] = s
+                    array[l + 1] = b
+                }
+            }
+        }
+    }
+    return array
 };
 

@@ -12,8 +12,18 @@
 
 
 function evenOccurrence (arr) {
-  // Write your code here, and
-  // return your final answer.
+  var i, l, occ = 0;
+  for (i = 0; i < arr.length; i++){
+    for(l = 0; l < arr.length; l++){
+      if (arr[i] === arr[l]){
+        occ++
+      }
+    }
+    if (occ % 2 === 0 && occ !== 0){
+      return arr[i]
+    } else { occ = 0 }
+  } 
+  return null
 }
 
 
